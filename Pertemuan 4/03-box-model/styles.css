@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.box-model {
+  width: 420px;
+  margin: 40px auto;
+  border: 8px solid #2563eb;
+  padding: 8px;
+  background: #dbeafe;
+}

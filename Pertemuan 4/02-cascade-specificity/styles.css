@@ -1,0 +1,12 @@
+.teks {
+  color: #047857;
+  font-size: 20px;
+}
+
+#box-utama .teks {
+    color: #b45309;
+}
+
+p {
+  color: #dc2626;
+}

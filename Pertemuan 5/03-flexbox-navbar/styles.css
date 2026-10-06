@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f8ff;
+  color: #172033;
+}
+
+/* Header: Flexbox satu dimensi (main axis = baris) */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  /* Variasi untuk Tabel 5.2, ganti satu per satu lalu amati:
+     justify-content: flex-start;
+     justify-content: center;
+     justify-content: space-around; */
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 8%;
+  background: white;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+}
+.brand {
+  font-weight: 800;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+/* Menu: flex bersarang, boleh pindah baris bila ruang tidak cukup */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Hero: ukuran font fleksibel dengan clamp() */
+.hero {
+  padding: 5rem 8%;
+  max-width: 760px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 0 0 1rem;
+}
+.hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+button {
+  background: #16a34a;
+  color: white;
+  border: 0;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.75rem;
+}
+
+/* Layar kecil (<= 640px): navbar berubah menjadi kolom */
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-menu {
+    flex-direction: column;
+  }
+}

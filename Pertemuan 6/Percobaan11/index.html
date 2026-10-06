@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Total Belanja &amp; Diskon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Kalkulator Total Belanja &amp; Diskon</h1>
+      <p class="subtitle">
+        Diskon 10% untuk total ≥ Rp200.000 dan 15% untuk total ≥ Rp500.000.
+      </p>
+
+      <section class="panel">
+        <form id="formBarang" class="card">
+          <h2>Input Barang</h2>
+
+          <label for="nama">Nama Barang</label>
+          <input id="nama" type="text" placeholder="Contoh: Buku" required />
+
+          <div class="grid">
+            <div>
+              <label for="harga">Harga (Rp)</label>
+              <input
+                id="harga"
+                type="number"
+                min="1"
+                placeholder="50000"
+                required
+              />
+            </div>
+            <div>
+              <label for="jumlah">Jumlah</label>
+              <input
+                id="jumlah"
+                type="number"
+                min="1"
+                step="1"
+                value="1"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit">Tambah ke Keranjang</button>
+          <p id="pesan" class="pesan"></p>
+        </form>
+
+        <section class="card">
+          <h2>Keranjang</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Barang</th>
+                <th>Harga</th>
+                <th>Jml</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="daftarBarang"></tbody>
+          </table>
+
+          <div class="aksi">
+            <button type="button" id="btnHitung">
+              Hitung Total &amp; Diskon
+            </button>
+            <button type="button" id="btnReset" class="sekunder">
+              Kosongkan
+            </button>
+          </div>
+
+          <div id="hasil" class="ringkasan"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

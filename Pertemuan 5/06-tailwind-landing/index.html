@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas Web Dasar - Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Topbar mobile-first: kolom di layar kecil, baris mulai md (768px) -->
+    <header
+      class="flex flex-col gap-3 bg-white px-[6%] py-4 shadow md:flex-row md:items-center md:justify-between"
+    >
+      <a href="#" class="text-xl font-extrabold text-blue-700">KelasWeb</a>
+      <nav
+        class="flex flex-col gap-2 font-bold text-slate-500 md:flex-row md:gap-6"
+        aria-label="Menu utama"
+      >
+        <a href="#fitur">Fitur</a>
+        <a href="#materi">Materi</a>
+        <a href="#daftar">Daftar</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero: satu kolom, dua kolom mulai lg (1024px) -->
+      <section class="grid items-center gap-8 px-[6%] py-16 lg:grid-cols-2">
+        <div>
+          <p
+            class="text-sm font-extrabold uppercase tracking-widest text-green-600"
+          >
+            Pemrograman Berbasis Web
+          </p>
+          <h1 class="mt-2 text-4xl font-bold leading-tight md:text-6xl">
+            Bangun halaman web responsif untuk semua perangkat.
+          </h1>
+          <p class="mt-4 max-w-xl text-lg leading-relaxed text-slate-500">
+            Pelajari Flexbox, CSS Grid, media query, dan prinsip mobile-first
+            melalui studi kasus landing page sederhana.
+          </p>
+          <a
+            href="#daftar"
+            class="mt-4 inline-block rounded-xl bg-green-600 px-5 py-3 font-bold text-white"
+          >
+            Ikuti Praktikum</a
+          >
+        </div>
+        <div class="min-h-64 rounded-3xl bg-slate-900 p-4"></div>
+      </section>
+
+      <!-- Fitur: satu kolom, tiga kolom mulai md (768px) -->
+      <section id="fitur" class="grid gap-4 px-[6%] pb-16 md:grid-cols-3">
+        <article class="rounded-2xl bg-white p-6 shadow">
+          <h2 class="font-bold">Flexbox</h2>
+          <p class="mt-2 leading-relaxed text-slate-500">
+            Susun navigasi dan komponen satu dimensi dengan rapi.
+          </p>
+        </article>
+        <article class="rounded-2xl bg-white p-6 shadow">
+          <h2 class="font-bold">CSS Grid</h2>
+          <p class="mt-2 leading-relaxed text-slate-500">
+            Buat layout dua dimensi yang fleksibel dan konsisten.
+          </p>
+        </article>
+        <article class="rounded-2xl bg-white p-6 shadow">
+          <h2 class="font-bold">Media Query</h2>
+          <p class="mt-2 leading-relaxed text-slate-500">
+            Sesuaikan tampilan berdasarkan ukuran viewport.
+          </p>
+        </article>
+      </section>
+
+      <!-- Materi: sidebar 320px + konten, berdampingan mulai lg (1024px) -->
+      <section
+        id="materi"
+        class="grid gap-4 px-[6%] pb-16 lg:grid-cols-[320px_1fr]"
+      >
+        <aside class="rounded-2xl bg-white p-6 shadow">
+          <h2 class="font-bold">Checklist</h2>
+          <ul class="mt-2 list-disc pl-5 leading-relaxed text-slate-500">
+            <li>Viewport meta tag</li>
+            <li>Mobile-first CSS</li>
+            <li>Fluid image dan spacing</li>
+            <li>Inspect responsive mode</li>
+          </ul>
+        </aside>
+        <article class="rounded-2xl bg-white p-6 shadow">
+          <h2 class="font-bold">Target Praktikum</h2>
+          <p class="mt-2 leading-relaxed text-slate-500">
+            Mahasiswa mampu mengubah struktur HTML dari pertemuan sebelumnya
+            menjadi landing page responsif yang dapat dibaca dengan baik pada
+            layar mobile, tablet, dan desktop.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="daftar" class="px-[6%] py-8 text-center text-slate-500">
+      © 2026 Kelas Web Dasar — Tailwind CSS v4
+    </footer>
+  </body>
+</html>
